@@ -1,0 +1,26 @@
+header {
+  width: 100%;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+}
+header ul {
+  width: 90%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  background-color: white;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+header ul li a {
+  color: #000;
+  font-family: Raleway, sans-serif;
+  font-size: 4rem;
+}
+/*# sourceMappingURL=menu.css.map */
