@@ -22,6 +22,15 @@
       </div>
       <div class="presentation">
         <p>Je m'appelle Nicolas GELIN, je suis actuellement étudiant en DUT MMI à Montbéliard et je vais poursuivre mes études à l'école HETIC dans le Bachelor Développement Web de cette école.</p>
+        <p>J'ai un profil orienté vers le développement front-end mais j'ai des connaissances et des bases en back-end.</p>
+        <p>J'ai aussi des compétences en design web, audiovisuel, communication digitale et aussi en 3D.</p>
+        <p><strong>Languages et framework :</strong></p>
+        <p>HTML/CSS | VueJS | Suite Adobe | JavaScript</p>
+        <p><strong>Logiciels :</strong></p>
+        <p>PHP Storm | VS Code | Wordpress | Suite Adobe | 3DS Max</p>
+        <p><strong>En cours d'apprentissage :</strong></p>
+        <p>React | Node.js | Symfony</p>
+
         <button><a :href="Me[0].acf.cv.url" download target="_blank">Voir mon CV</a></button>
       </div>
 
