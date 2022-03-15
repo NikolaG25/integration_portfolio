@@ -30,9 +30,8 @@ header ul li a {
   transition: font-size;
 }
 .name {
-  font-size: 10vw;
+  font-size: 8vw;
   font-family: Raleway, sans-serif;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin: 0 5%;
 }
 /*# sourceMappingURL=menu.css.map */

@@ -88,7 +88,7 @@ body {
       width: 50vw;
     }
     p {
-      font-size: 1vw;
+      font-size: 1.3rem;
       text-align: left;
     }
     button {
@@ -264,10 +264,94 @@ button  {
     width: 50vw;
     position: absolute;
     bottom: -7%;
-    right: 0;
+    right: -5%;
     z-index: -1;
     margin: 0;
 
   }
 
+}
+
+@media (max-width: 425px) {
+  .name {
+    margin-bottom: 50px;
+  }
+  .me {
+    flex-direction: column;
+    .my_photo {
+      width: 90%;
+      margin-bottom: 30px;
+    }
+    .presentation {
+      width: 100%;
+      align-items: center;
+    }
+  }
+
+  .liste_projets {
+    .projet {
+      flex-direction: column;
+      h1 {
+        transform: rotateZ(0);
+        white-space: nowrap;
+        width: max-content;
+      }
+      img {
+        width: 70vw;
+      }
+      .border {
+        width: 70vw;
+        right: -1%;
+      }
+    }
+  }
+
+}
+
+
+.button_proj {
+  width: 250px;
+}
+
+
+footer {
+  flex-wrap: wrap;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 75px;
+  .nav_footer {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  h2 {
+    width: max-content;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: max-content;
+      //margin-right: 20px;
+      margin-bottom: 15px;
+    }
+    button {
+      width: 250px;
+    }
+    a {
+      color: black;
+      font-size: 1.5rem;
+
+    }
+
+  }
+  img{
+    width: 50px;
+    margin-right: 15px;
+  }
 }

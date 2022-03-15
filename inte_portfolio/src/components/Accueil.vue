@@ -93,13 +93,14 @@ h1 {
 
   .title_port {
     white-space: nowrap;
-    font-size: 10vw;
+    font-size: 8vw;
     animation: scrollTxt 25s linear infinite;
     border-top: solid 5px black;
     border-bottom: solid 5px black;
     /*padding-bottom: 15px;*/
     padding-top: 15px;
     /*font-family: Raleway, sans-serif;*/
+    margin-bottom: 0;
   }
 
   .title2 {
