@@ -44,6 +44,19 @@
       </ul>
     </div>
 
+    <div class="3d">
+      <h2>3D</h2>
+      <ul>
+        <li class="project" v-for="projet in listeProjet" :key="projet.id" v-if="projet.acf.categorie_projet === '3D'">
+          <h3>{{projet.acf.projets.title_project}}</h3>
+          <img class="img_proj" :src="projet.acf.projets.img_project.url" :alt="projet.acf.projets.title_project">
+          <button class="button">
+            <router-link :to="{name:'ficheProjet', params: {id: projet.id}}">Voir plus</router-link>
+          </button>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </template>
 

@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <button class="button_proj" v-if="projet.acf.projets.link_project!= null"><a :href="projet.acf.projets.link_project" target="_blank">Voir le projet</a></button>
+    <button class="button_proj" v-if="projet.acf.projets.link_project!== ''"><a :href="projet.acf.projets.link_project" target="_blank">Voir le projet</a></button>
 
 
   </div>
