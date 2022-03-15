@@ -1,6 +1,6 @@
 <template>
   <div class="accueil">
-    <h1>Nicolas GELIN</h1>
+    <h1 class="name">Nicolas GELIN</h1>
     <div class="titles">
       <div class="container">
         <h1 class="title_port">- PORTFOLIO - <span class="outline">PORTFOLIO</span> - PORTFOLIO - <span class="outline">PORTFOLIO</span>&nbsp;</h1>
@@ -14,11 +14,36 @@
       </div>
     </div>
 
-<!--    <ul>-->
-<!--      <li v-for="projet in listeProjetEnAvant" :key="projet.key" v-if="projet.acf.projets.en_avant === true">-->
-<!--        <h1>{{projet.acf.projets.title_project}}</h1>-->
-<!--      </li>-->
-<!--    </ul>-->
+
+    <div class="me">
+      <div class="my_photo">
+        <img :src="Me[0].acf.my_photo.url" alt="">
+        <div class="border"></div>
+      </div>
+      <div class="presentation">
+        <p>Je m'appelle Nicolas GELIN, je suis actuellement étudiant en DUT MMI à Montbéliard et je vais poursuivre mes études à l'école HETIC dans le Bachelor Développement Web de cette école.</p>
+        <button><a :href="Me[0].acf.cv.url" download target="_blank">Voir mon CV</a></button>
+      </div>
+
+
+    </div>
+
+    <div class="liste_projets">
+      <div class="projet" v-for="projet in listeProjetEnAvant" :key="projet.id" v-if="projet.acf.projets.en_avant === true">
+        <h1>{{projet.acf.projets.title_project}}</h1>
+        <div>
+          <div class="cap_proj">
+            <img :src="projet.acf.projets.img_project.url" alt="">
+            <div class="border"></div>
+          </div>
+          <p>{{projet.acf.projets.desc_project}}</p>
+          <button>
+            <router-link :to="{name:'ficheProjet', params: {id: projet.id}}">Voir plus</router-link>
+          </button>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </template>
@@ -30,11 +55,18 @@ export default {
   name: 'Accueil',
   data () {
     return {
-      listeProjetEnAvant: []
+      listeProjetEnAvant: [],
+      Me: []
     }
   },
 
   created() {
+    axios.get(param.host+'/moi')
+    .then(response => {
+      this.Me = response.data
+      console.log('me', this.Me)
+    })
+    .catch(error => console.log(error))
     axios.get(param.host+'/projets')
     .then(response => {
       console.log(response.data)
@@ -54,48 +86,30 @@ h1 {
     display: flex;
     overflow: hidden;
     width: 100%;
-    position: absolute;
-    top: 40%;
+    /*position: absolute;*/
     transform: translateY(-50%);
+    margin-top: 7vw;
   }
 
   .title_port {
     white-space: nowrap;
-    font-size: 200px;
+    font-size: 10vw;
     animation: scrollTxt 25s linear infinite;
-    border-top: solid 10px black;
-    border-bottom: solid 10px black;
+    border-top: solid 5px black;
+    border-bottom: solid 5px black;
     /*padding-bottom: 15px;*/
     padding-top: 15px;
     /*font-family: Raleway, sans-serif;*/
   }
 
   .title2 {
-    margin-top: 20%;
+    margin-top: 0;
   }
 
   .title2 .title_port {
     animation: scrollTxt 25s linear infinite reverse;
 
   }
-
-  .title_comp {
-
-    margin-top: 20%;
-    white-space: nowrap;
-    font-size: 200px;
-    animation: scrollTxtReverse 25s linear infinite;
-    border-top: solid 10px black;
-    border-bottom: solid 10px black;
-  }
-
-  /*.tp1 {*/
-  /*  color: red;*/
-  /*}*/
-
-  /*.tp2 {*/
-  /*  color: blue;*/
-  /*}*/
 
   @keyframes scrollTxt {
     0% {
@@ -106,17 +120,8 @@ h1 {
     }
   }
 
-  @keyframes scrollTxtReverse {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(100%, 0);
-    }
-  }
-
   .outline {
     color: transparent;
-    -webkit-text-stroke: 7px black;
+    -webkit-text-stroke: 1px black;
   }
 </style>

@@ -1,0 +1,273 @@
+body {
+  width: 100vw;
+  overflow-x:  hidden;
+}
+
+
+.projets {
+  .audio, .dev, .design {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 2.5rem;
+    border-bottom: black 3px solid;
+    border-top: black 3px solid;
+    width: max-content;
+    padding: 5px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    justify-content: center;
+    li {
+      margin: 20px;
+    }
+  }
+  .img_proj {
+    width: 300px;
+    height: 175px;
+    border: solid black 3px;
+  }
+}
+
+.liste_projets {
+  //.projet:nth-child(2n) {
+  //  flex-direction: row-reverse;
+  //
+  //  h1 {
+  //    transform: rotateZ(90deg);
+  //
+  //  }
+  //}
+
+  .projet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: max-content;
+    width: 80vw;
+    justify-content: center;
+    margin-bottom: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+      transform: rotateZ(-90deg);
+      font-size: 8vw;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 5px 30px;
+      width: 24%;
+      text-align: center;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    img {
+      width: 50vw;
+    }
+    p {
+      font-size: 1vw;
+      text-align: left;
+    }
+    button {
+      width: 200px;
+      height: 60px;
+    }
+  }
+}
+
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+button:hover {
+  :after, :before {
+    transform: translate(0)
+
+  }
+}
+
+button  {
+  position: relative;
+  margin-top: 20px;
+  width: 75%;
+  background: none;
+  border: none;
+  padding: 20px 40px;
+
+  cursor: pointer;
+
+
+  :after, :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #000;
+    transition: transform .2s;
+  }
+  :after {
+    transform: translate(3px, 3px)
+  }
+  :before {
+    transform: translate(-3px, -3px)
+  }
+
+  a {
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+
+.fiche {
+  margin-left: auto;
+  margin-right: auto;
+
+  h1 {
+    font-size: 3rem;
+    border-top: black 3px solid;
+    border-bottom: black 3px solid;
+    margin-top: 50px;
+
+    padding: 5px 20px;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .fiche_project {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      width: 90%;
+      height: 100%;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .content_project {
+      display: flex;
+      flex-direction: column;
+      h2 {
+        font-size: 2.3rem;
+      }
+      p{
+        font-size: 1.5rem;
+      }
+
+      * {
+        text-align: left;
+        margin-right: auto;
+        margin-left: auto;
+        width: 90%;
+
+      }
+    }
+  }
+}
+
+.me {
+
+  display: flex;
+  margin-bottom: 200px;
+  .presentation {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    p {
+      font-size: 2rem;
+      text-align: left;
+      width: 80%;
+    }
+  }
+
+  a {
+    color: #000;
+  }
+
+  .my_photo {
+    width: 50%;
+    position: relative;
+    height: max-content;
+    img {
+      width: 50%;
+      border: 3px solid black;
+
+
+    }
+    .border {
+      border: 3px solid black;
+      height: 100%;
+      width: 50%;
+      position: absolute;
+      bottom: -7%;
+      right: 19%;
+      z-index: -1;
+      margin: 0;
+
+    }
+  }
+
+
+}
+
+
+.cap_proj {
+  position: relative;
+  margin-bottom: 60px;
+
+  img {
+    border: 3px solid black;
+
+  }
+  .border {
+    border: 3px solid black;
+    height: 100%;
+    width: 50vw;
+    position: absolute;
+    bottom: -7%;
+    right: 0;
+    z-index: -1;
+    margin: 0;
+
+  }
+
+}

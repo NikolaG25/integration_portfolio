@@ -1,18 +1,17 @@
 <template>
   <div id="app">
     <header>
-      <ul>
+      <ul class="menu">
         <li>
-          <router-link to="/">Accueil</router-link>
+          <button>
+            <router-link to="/">Accueil</router-link>
+
+          </button>
         </li>
         <li>
-          <router-link to="/projets">Tous mes projets</router-link>
-        </li>
-        <li>
-          <router-link to="apropos">A propos de moi</router-link>
-        </li>
-        <li>
-          <router-link to="contact">Contact</router-link>
+          <button>
+            <router-link to="/projets">Mes projets</router-link>
+          </button>
         </li>
       </ul>
     </header>
@@ -33,11 +32,8 @@ export default {
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 
 
